@@ -16,7 +16,6 @@
 #' # iris is a bit nonsense here
 #' unlink("./optpath.RData")
 #' estimateTuneRFTime(iris.task)
-
 estimateTuneRFTime = function(task, iters = 100, num.threads = 1, num.trees = 1000, respect.unordered.factors = TRUE) {
   type = getTaskType(task)
   predict.type = ifelse(type == "classif", "prob", "response")
